@@ -1,7 +1,7 @@
 package com.ifedoroff.test.app.model;
 
-import com.ifedoroff.test.app.Controller;
 import com.ifedoroff.test.app.LoggFactory;
+import com.ifedoroff.test.app.Main;
 import com.ifedoroff.test.app.controller.IController;
 import com.sun.javafx.scene.control.skin.FXVK;
 import javafx.beans.value.ChangeListener;
@@ -33,6 +33,14 @@ public class EngineHandler {
     public static WebEngine getEngine() {
         return engine;
     }
+
+    public static void changeContent(String name)
+    {
+
+        engine.load(Main.class.getClassLoader().getResource(name).toString());
+
+    }
+
 
 
     public static void addEventListenersToDOM() {

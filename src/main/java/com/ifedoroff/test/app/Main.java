@@ -1,7 +1,10 @@
 package com.ifedoroff.test.app;
 
 import com.ifedoroff.test.app.controller.LoginController;
+import com.ifedoroff.test.app.controller.MainController;
+import com.ifedoroff.test.app.controller.TitleController;
 import com.ifedoroff.test.app.model.EngineHandler;
+import com.ifedoroff.test.app.model.VirtualKeyboard;
 import com.sun.javafx.scene.control.skin.FXVK;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -17,12 +20,13 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import netscape.javascript.JSObject;
+import org.w3c.dom.Document;
 
 import java.io.IOException;
 
 public class Main extends Application {
 
-
+    public static Stage stage;
     @Override
     public void start(final Stage primaryStage) throws Exception{
 
@@ -38,16 +42,7 @@ public class Main extends Application {
 
 
         webEngine.load(Main.class.getClassLoader().getResource("main.html").toString());
-        webEngine.getLoadWorker().stateProperty().addListener(new ChangeListener<Worker.State>() {
-            public void changed(ObservableValue<? extends Worker.State> ov, Worker.State oldState, Worker.State newState) {
-                if (newState == Worker.State.SUCCEEDED) {
-                    JSObject window = (JSObject) webEngine.executeScript("window");
-                    window.setMember("testController", new Controller());
-                    LoggFactory.writeLog("Adding controllers..");
-                    }
-                }
-            }
-        );
+
 
         root.getChildren().add(browser);
         Scene scene = new Scene(root);
@@ -59,8 +54,10 @@ public class Main extends Application {
         EngineHandler.setView(browser);
         LoggFactory.writeLog("All controllers added..");
         EngineHandler.addController("loginController",new LoginController());
-        EngineHandler.addEventListenersToDOM();
-
+        EngineHandler.addController("titleController",new TitleController());
+        EngineHandler.addController("mainController",new MainController());
+        stage = primaryStage;
+        //EngineHandler.addEventListenersToDOM();
     }
 
     public static void main(String[] args) {
