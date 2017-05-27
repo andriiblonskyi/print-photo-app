@@ -4,11 +4,14 @@ function test()
 }
 
 function instagram_selected() {
-    titleController.instagramSelected();
+    var html = titleController.instagramSelected();
+    document.getElementsByTagName('body')[0].innerHTML = html;
+    titleController.addVkListener();
 }
 
 function login() {
-    var res = loginController.authorizeInstagram("fdsf","fsfsgf");
-    var element = document.getElementById("test");
-    element.innerHTML = res;
+    var inputsList = document.getElementsByClassName('input');
+
+    var res = loginController.authorizeInstagram(inputsList.length,inputsList.length);
+
 }

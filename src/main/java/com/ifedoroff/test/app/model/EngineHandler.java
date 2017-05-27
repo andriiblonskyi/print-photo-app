@@ -47,29 +47,26 @@ public class EngineHandler {
 
         if (engine == null || view == null)
             return;
-        engine.getLoadWorker().stateProperty().addListener(new ChangeListener<Worker.State>() {
 
-            public void changed(ObservableValue<? extends Worker.State> ov, Worker.State oldState, Worker.State newState) {
+        JSObject win = (JSObject) engine.executeScript("window");
+        win.setMember("VirtualKeyboard", new VirtualKeyboard());
+        String script =
 
-                if (newState == Worker.State.SUCCEEDED) {
-                    JSObject win = (JSObject) engine.executeScript("window");
-                    win.setMember("VirtualKeyboard", new VirtualKeyboard());
+                "var inputsList = document.getElementsByClassName('input');"
+                        + "for (var index = 0; index < inputsList.length; ++index) { "
+                        +      "inputsList[index].addEventListener('focus', function() { VirtualKeyboard.show() }, false); "
+                        +      "inputsList[index].addEventListener('focusout', function() { VirtualKeyboard.hide() }, false); "
+                        + "}";
+        engine.executeScript(script);
 
-                    String script =
-                            "var input = document.getElementById('input');\n" +
-                                    "    input.addEventListener('focus', function() { VirtualKeyboard.show() }, false); \n" +
-                                    "    input.addEventListener('focusout', function() { VirtualKeyboard.hide() }, false);";
-                            //"var input = document.getElementById('input');"
-                            //        +"var element = document.getElementById('test');"
-                            //        +"element.innerHTML = input;"
-                             //       + "for (var index = 0; index < inputsList.length; ++index) { "
-                            //        +      "inputsList[index].addEventListener('focus', function() { VirtualKeyboard.show() }, false); "
-                            //        +      "inputsList[index].addEventListener('focusout', function() { VirtualKeyboard.hide() }, false); "
-                            //        + "}";
-                    engine.executeScript(script);
-                }
-            }
-        });
+       // engine.getLoadWorker().stateProperty().addListener(new ChangeListener<Worker.State>() {
+
+           // public void changed(ObservableValue<? extends Worker.State> ov, Worker.State oldState, Worker.State newState) {
+                //if (newState == Worker.State.SUCCEEDED) {
+
+           //     }
+           // }
+       // });
     }
     public static void addController(final String alias, final IController controller)
     {

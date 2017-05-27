@@ -1,7 +1,7 @@
 body {
     width: 768px;
     height: 1366px;
-    font-family: 'Arial Bold';
+    font-family: 'Trebuchet MS';
     background-size: 768px 1366px;
 }
 
@@ -36,7 +36,8 @@ h1 {
     text-align:center;
 }
 
-#input {
+.input {
+    text-align: center;
     background-color: white;
     background-color: -moz-field;
     border: 1px solid darkgray;
@@ -45,5 +46,28 @@ h1 {
     font: -webkit-small-control;
     margin-top: 5px;
     padding: 2px 3px;
-    width: 398px;
+    width: 300px;
+    heigth: 30px;
+    font-size: 20px;
+    margin-left:234px;
+}
+
+.btn {
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    font-family: Trebuchet MS;
+    color: #ffffff;
+    font-size: 22px;
+    background: #686d70;
+    width: 150px;
+    margin-left:309px;
+    margin-top:20px;
+    font-weight:100;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #818385;
+    text-decoration: none;
 }

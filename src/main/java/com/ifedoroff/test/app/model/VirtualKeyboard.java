@@ -10,8 +10,6 @@ import javafx.scene.web.WebView;
 public class VirtualKeyboard {
 
     public void show() {
-        System.out.println("Show");
-
         FXVK.init(EngineHandler.getView());
         FXVK.attach(EngineHandler.getView());
 
@@ -19,7 +17,6 @@ public class VirtualKeyboard {
     }
 
     public void hide() {
-        System.out.println("Hide");
         FXVK.detach();
     }
 }

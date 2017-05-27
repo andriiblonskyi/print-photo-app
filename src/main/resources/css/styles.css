@@ -7,7 +7,7 @@ body {
 
 .fb {
     margin-top:100px;
-    background-image: url("../fb.png");
+    background-image: url("fb.png");
     background-size: 150px 150px;
     display:block;
     height: 150px;
@@ -20,7 +20,7 @@ body {
 
 .instagram {
     margin-top:100px;
-    background-image: url("../instagram.png");
+    background-image: url("instagram.png");
     background-size: 150px 150px;
     display:block;
     height: 150px;
