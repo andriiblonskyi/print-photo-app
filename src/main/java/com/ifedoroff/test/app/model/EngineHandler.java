@@ -53,6 +53,7 @@ public class EngineHandler {
                                     +"element.innerHTML = inputsList.length;"
                                     + "for (var index = 0; index < inputsList.length; ++index) { "
                                     +      "inputsList[index].addEventListener('focus', function() { VirtualKeyboard.show() }, false); "
+                                    +      "inputsList[index].addEventListener('focusout', function() { VirtualKeyboard.hide() }, false); "
                                     + "}";
                     engine.executeScript(script);
                 }
