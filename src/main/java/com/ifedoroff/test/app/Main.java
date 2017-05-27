@@ -61,8 +61,6 @@ public class Main extends Application {
         EngineHandler.addController("loginController",new LoginController());
         EngineHandler.addEventListenersToDOM();
 
-        FXVK.init(EngineHandler.getView());
-        FXVK.attach(EngineHandler.getView());
     }
 
     public static void main(String[] args) {

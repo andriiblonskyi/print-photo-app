@@ -48,13 +48,16 @@ public class EngineHandler {
                     win.setMember("VirtualKeyboard", new VirtualKeyboard());
 
                     String script =
-                            "var inputsList = document.getElementsByTagName('input');"
-                                    +"var element = document.getElementById('test');"
-                                    +"element.innerHTML = inputsList.length;"
-                                    + "for (var index = 0; index < inputsList.length; ++index) { "
-                                    +      "inputsList[index].addEventListener('focus', function() { VirtualKeyboard.show() }, false); "
-                                    +      "inputsList[index].addEventListener('focusout', function() { VirtualKeyboard.hide() }, false); "
-                                    + "}";
+                            "var input = document.getElementById('input');\n" +
+                                    "    input.addEventListener('focus', function() { VirtualKeyboard.show() }, false); \n" +
+                                    "    input.addEventListener('focusout', function() { VirtualKeyboard.hide() }, false);";
+                            //"var input = document.getElementById('input');"
+                            //        +"var element = document.getElementById('test');"
+                            //        +"element.innerHTML = input;"
+                             //       + "for (var index = 0; index < inputsList.length; ++index) { "
+                            //        +      "inputsList[index].addEventListener('focus', function() { VirtualKeyboard.show() }, false); "
+                            //        +      "inputsList[index].addEventListener('focusout', function() { VirtualKeyboard.hide() }, false); "
+                            //        + "}";
                     engine.executeScript(script);
                 }
             }
