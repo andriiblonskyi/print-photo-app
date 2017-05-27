@@ -1,6 +1,9 @@
 package com.ifedoroff.test.app;
 
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Worker;
 import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
@@ -8,6 +11,7 @@ import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import netscape.javascript.JSObject;
 
 public class Main extends Application {
 
@@ -32,6 +36,15 @@ public class Main extends Application {
         //root.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
         webEngine.load(Main.class.getClassLoader().getResource("main.html").toString());
+        webEngine.getLoadWorker().stateProperty().addListener(new ChangeListener<Worker.State>() {
+                                                                  public void changed(ObservableValue<? extends Worker.State> ov, Worker.State oldState, Worker.State newState) {
+                                                                      if (newState == Worker.State.SUCCEEDED) {
+                                                                          JSObject window = (JSObject) webEngine.executeScript("window");
+                                                                          window.setMember("testController", new Controller());
+                                                                      }
+                                                                  }
+                                                              }
+        );
         //URL url = Main.class.getClassLoader().getResource("main.js");
         //webEngine.loadContent(url.toExternalForm(),"text/javascript");
 //        System.out.println(Main.class.getClassLoader().getResource("js/main.js").toString());
