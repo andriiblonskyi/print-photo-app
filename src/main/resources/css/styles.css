@@ -33,6 +33,7 @@ body {
     width: 26%;
     height: 10%;
     margin-left: 42%;
+    text-align: center;
 }
 
 
@@ -126,8 +127,8 @@ h2 {
 
 .container { width: 100%; max-width: 1280px; min-width: 320px; margin: 0 auto; clear: both; margin-top:2%;}
 
-.col-3 { float: left;  width: 30.8%; margin-right: 3.8%; margin-top: 2%; }
-
+.col-3 { float: left;  width: 30.8%; margin-right: 3.8%; margin-top: 2%; position:relative; }
+.imgA1 { position:absolute; top: 75%; left: 75%; z-index: 1; }
 .col-4 { float: left;  width: 23.1%; margin-right: 3.8%; margin-top: 2%; }
 
 .last { margin-right: 0; }
@@ -170,6 +171,12 @@ h2 {
     background-color:#3B579D;
 }
 
+.headerinstagram {
+    width:100%;
+    heigth:10%;
+    background-color:#d9dce0;
+}
+
 .accountlogofacebook {
     margin-top:2%;
     background-image: url("fb.png");
@@ -192,3 +199,6 @@ h2 {
      margin-left: 45.5%;
  }
 
+.zelupa {
+    text-align: center;
+}
