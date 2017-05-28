@@ -1,38 +1,47 @@
 body {
-    width: 768px;
-    height: 1366px;
+    height: 100%;
     font-family: 'Trebuchet MS';
-    background-size: 768px 1366px;
+    background-size: cover;
 }
 
 .fb {
     margin-top:100px;
     background-image: url("fb.png");
-    background-size: 150px 150px;
+    background-size: 10.5em 10.5em;
     display:block;
-    height: 150px;
-    width: 150px;
+    height: 10.5em;
+    width: 10.5em;
     border-radius: 50%;
     border: 1px solid grey;
     float:left;
-    margin-left:209px;
 }
 
 .instagram {
     margin-top:100px;
     background-image: url("instagram.png");
-    background-size: 150px 150px;
+    background-size: 10.5em 10.5em;
     display:block;
-    height: 150px;
-    width: 150px;
+    height: 10.5em;
+    width: 10.5em;
     border-radius: 50%;
     border: 1px solid grey;
     float:left;
-    margin-left:50px;
+    margin-left:7%;
 }
 
-h1 {
+.wrapper {
+    width: 26%;
+    height: 10%;
+    margin-left: 42%;
+}
 
+
+
+h1 {
+    text-align:center;
+}
+
+h2 {
     text-align:center;
 }
 
@@ -46,10 +55,10 @@ h1 {
     font: -webkit-small-control;
     margin-top: 5px;
     padding: 2px 3px;
-    width: 300px;
+    width: 20%;
     heigth: 30px;
     font-size: 20px;
-    margin-left:234px;
+    margin-left:40%;
 }
 
 .btn {
@@ -60,8 +69,8 @@ h1 {
     color: #ffffff;
     font-size: 22px;
     background: #686d70;
-    width: 150px;
-    margin-left:309px;
+    width: 16%;
+    margin-left:42%;
     margin-top:20px;
     font-weight:100;
     text-decoration: none;
