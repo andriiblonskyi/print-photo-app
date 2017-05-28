@@ -80,3 +80,57 @@ h2 {
     background: #818385;
     text-decoration: none;
 }
+
+.header {
+    width:100%;
+    heigth:10%;
+    background-color:#eaecef;
+}
+
+.accountlogo {
+    margin-top:2%;
+    background-image: url("instagram.png");
+    background-size: 9em 9em;
+    display:block;
+    height: 9em;
+    width: 9em;
+    border-radius: 50%;
+    border: 1px solid grey;
+    float:left;
+    margin-left:47%;
+}
+
+.logoname {
+    text-align:center;
+    font-weight:100;
+    font-color:black;
+    font-size:2em;
+    float: left;
+    margin-left: 46.5%;
+}
+
+.basketbtn {
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    font-family: Trebuchet MS;
+    color: #ffffff;
+    font-size: 32px;
+    background: #686d70;
+    width: 16%;
+    margin-left:42%;
+    margin-top:2%;
+    font-weight:100;
+    text-decoration: none;
+}
+
+.container { width: 100%; max-width: 1280px; min-width: 320px; margin: 0 auto; clear: both; margin-top:2%;}
+
+.col-3 { float: left;  width: 30.8%; margin-right: 3.8%; margin-top: 2%; }
+
+.last { margin-right: 0; }
+
+.btnimg:hover {
+    background: #b860d1;
+    text-decoration: none;
+}

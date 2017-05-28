@@ -15,3 +15,7 @@ function login() {
     var res = loginController.authorizeInstagram(inputsList.length,inputsList.length);
 
 }
+
+function basket() {
+
+}
