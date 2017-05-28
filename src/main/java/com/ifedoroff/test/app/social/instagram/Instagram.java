@@ -138,6 +138,40 @@ public class Instagram implements AuthenticatedInsta {
         return medias;
 
     }
+
+    public List<Media> getMediasInRange(String username, int count,String minId) throws IOException {
+        int index = 0;
+        ArrayList<Media> medias = new ArrayList<Media>();
+        String maxId = "";
+        boolean isMoreAvailable = true;
+
+        while (index < count && isMoreAvailable) {
+            Request request = new Request.Builder()
+                    .url(Endpoint.getAccountMediasJsonLinkInRange(username,minId, maxId))
+                    .build();
+
+            Response response = this.httpClient.newCall(request).execute();
+            String jsonString = response.body().string();
+            response.body().close();
+
+            Map mediasMap = gson.fromJson(jsonString, Map.class);
+            List items = (List) mediasMap.get("items");
+
+            for (Object item : items) {
+                if (index == count) {
+                    return medias;
+                }
+                index++;
+                Map mediaMap = (Map) item;
+                Media media = Media.fromApi(mediaMap);
+                medias.add(media);
+                maxId = media.id;
+            }
+            isMoreAvailable = (Boolean) mediasMap.get("more_available");
+        }
+        return medias;
+    }
+
     public List<Media> getMedias(String username, int count) throws IOException {
         int index = 0;
         ArrayList<Media> medias = new ArrayList<Media>();

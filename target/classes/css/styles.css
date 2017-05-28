@@ -1,38 +1,47 @@
 body {
-    width: 768px;
-    height: 1366px;
+    height: 100%;
     font-family: 'Trebuchet MS';
-    background-size: 768px 1366px;
+    background-size: cover;
 }
 
 .fb {
     margin-top:100px;
     background-image: url("fb.png");
-    background-size: 150px 150px;
+    background-size: 10.5em 10.5em;
     display:block;
-    height: 150px;
-    width: 150px;
+    height: 10.5em;
+    width: 10.5em;
     border-radius: 50%;
     border: 1px solid grey;
     float:left;
-    margin-left:209px;
 }
 
 .instagram {
     margin-top:100px;
     background-image: url("instagram.png");
-    background-size: 150px 150px;
+    background-size: 10.5em 10.5em;
     display:block;
-    height: 150px;
-    width: 150px;
+    height: 10.5em;
+    width: 10.5em;
     border-radius: 50%;
     border: 1px solid grey;
     float:left;
-    margin-left:50px;
+    margin-left:7%;
 }
 
-h1 {
+.wrapper {
+    width: 26%;
+    height: 10%;
+    margin-left: 42%;
+}
 
+
+
+h1 {
+    text-align:center;
+}
+
+h2 {
     text-align:center;
 }
 
@@ -46,10 +55,10 @@ h1 {
     font: -webkit-small-control;
     margin-top: 5px;
     padding: 2px 3px;
-    width: 300px;
+    width: 20%;
     heigth: 30px;
     font-size: 20px;
-    margin-left:234px;
+    margin-left:40%;
 }
 
 .btn {
@@ -60,8 +69,8 @@ h1 {
     color: #ffffff;
     font-size: 22px;
     background: #686d70;
-    width: 150px;
-    margin-left:309px;
+    width: 16%;
+    margin-left:42%;
     margin-top:20px;
     font-weight:100;
     text-decoration: none;
@@ -71,3 +80,115 @@ h1 {
     background: #818385;
     text-decoration: none;
 }
+
+.headerinstagram {
+    width:100%;
+    heigth:10%;
+    background-color:#c6cad1;
+}
+
+.accountlogoinstagram {
+
+    margin-top:2%;
+    background-size: 9em 9em;
+    display:block;
+    height: 9em;
+    width: 9em;
+    border-radius: 50%;
+    border: 1px solid grey;
+    float:left;
+    margin-left:47%;
+}
+
+.logoname {
+    text-align:center;
+    font-weight:100;
+    font-color:black;
+    font-size:2em;
+    float: left;
+    margin-left: 46.5%;
+}
+
+.basketbtn {
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    font-family: Trebuchet MS;
+    color: #ffffff;
+    font-size: 32px;
+    background: #686d70;
+    width: 16%;
+    margin-top: 1%;
+    margin-left: 26%;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.container { width: 100%; max-width: 1280px; min-width: 320px; margin: 0 auto; clear: both; margin-top:2%;}
+
+.col-3 { float: left;  width: 30.8%; margin-right: 3.8%; margin-top: 2%; }
+
+.col-4 { float: left;  width: 23.1%; margin-right: 3.8%; margin-top: 2%; }
+
+.last { margin-right: 0; }
+
+.btnimg:hover {
+    background: #b860d1;
+    text-decoration: none;
+}
+
+.left {
+    background-image: url(left-arrow.png);
+    background-size: 6em 6em;
+    display: block;
+    height: 6em;
+    width: 6em;
+    float: left;
+    margin-left: 24%;
+}
+
+.right {
+    background-image: url(right-arrow.png);
+    background-size: 6em 6em;
+    display: block;
+    height: 6em;
+    width: 6em;
+    float: left;
+    margin-left: 3%;
+}
+
+
+.navigation {
+    width:100%;
+    margin-top:1%;
+    float: left;
+}
+
+.headerfacebook {
+    width:100%;
+    heigth:10%;
+    background-color:#3B579D;
+}
+
+.accountlogofacebook {
+    margin-top:2%;
+    background-image: url("fb.png");
+    background-size: 9em 9em;
+    display:block;
+    height: 9em;
+    width: 9em;
+    border-radius: 2%;
+    border: 1px solid grey;
+    float:left;
+    margin-left:47%;
+}
+
+.namefb {
+     text-align:center;
+     font-weight:100;
+     font-color:black;
+     font-size:2em;
+     float: left;
+     margin-left: 45.5%;
+ }
+

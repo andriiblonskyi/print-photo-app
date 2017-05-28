@@ -52,7 +52,6 @@ public class Main extends Application {
 
         EngineHandler.setEngine(webEngine);
         EngineHandler.setView(browser);
-        LoggFactory.writeLog("All controllers added..");
         EngineHandler.addController("loginController",new LoginController());
         EngineHandler.addController("titleController",new TitleController());
         EngineHandler.addController("mainController",new MainController());

@@ -17,10 +17,12 @@ public class TitleController implements IController {
 
     public String instagramSelected()
     {
-        System.out.println("Here");
-        String html = "<div id=\"solologininput\" class=\"input\" style=\"margin-top:50%\" contenteditable>@Логин</div>\n" +
-                "<h1 style=\"color: white; font-weight: 100;\">или авторизуйтесь</h1>\n" +
-                "<div id=\"logininput\" class=\"input\" contenteditable>Логин</div>\n" +
+        System.out.println("Instagram selected");
+        String html = "\n" +
+                "<div id=\"solologininput\" class=\"input\" style=\"margin-top:15%\" contenteditable>@Логин</div>\n" +
+                "<button class=\"btn\" onclick=\"search()\">Search</button>\n" +
+                "<h2 style=\"color: white; font-weight: 100; margin-top:2%;\">или авторизуйтесь</h2>\n" +
+                "<div id=\"logininput\" class=\"input\" style=\"margin-top:2%;\" contenteditable>Логин</div>\n" +
                 "<div style=\"margin-top:10px;\" id=\"passwordinput\" class=\"input\" contenteditable>Пароль</div>\n" +
                 "\n" +
                 "<button class=\"btn\" onclick=\"login()\">Login</button>";
