@@ -81,13 +81,13 @@ h2 {
     text-decoration: none;
 }
 
-.header {
+.headerinstagram {
     width:100%;
     heigth:10%;
-    background-color:#eaecef;
+    background-color:#c6cad1;
 }
 
-.accountlogo {
+.accountlogoinstagram {
     margin-top:2%;
     background-image: url("instagram.png");
     background-size: 9em 9em;
@@ -128,6 +128,8 @@ h2 {
 
 .col-3 { float: left;  width: 30.8%; margin-right: 3.8%; margin-top: 2%; }
 
+.col-4 { float: left;  width: 23.1%; margin-right: 3.8%; margin-top: 2%; }
+
 .last { margin-right: 0; }
 
 .btnimg:hover {
@@ -161,3 +163,32 @@ h2 {
     margin-top:1%;
     float: left;
 }
+
+.headerfacebook {
+    width:100%;
+    heigth:10%;
+    background-color:#3B579D;
+}
+
+.accountlogofacebook {
+    margin-top:2%;
+    background-image: url("fb.png");
+    background-size: 9em 9em;
+    display:block;
+    height: 9em;
+    width: 9em;
+    border-radius: 2%;
+    border: 1px solid grey;
+    float:left;
+    margin-left:47%;
+}
+
+.namefb {
+     text-align:center;
+     font-weight:100;
+     font-color:black;
+     font-size:2em;
+     float: left;
+     margin-left: 45.5%;
+ }
+
